@@ -27,7 +27,7 @@ result = api.query(query)
 
 plainpath = "output/"+os.path.basename(args.query)+".out.txt"
 print("Store result in "+plainpath)
-plaintxtout = open(plainpath,"w") 
+plaintxtout = open(plainpath,"w",encoding="utf8") 
 
 for node in result.nodes:
     plaintxtout.write(str.format("{0} , {1} , {2} \n",node.lon,node.lat,node.tags.get("name","")))
