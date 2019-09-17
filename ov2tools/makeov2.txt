@@ -1,0 +1,68 @@
+
+MAKEOV2 / DUMPOV2
+=================
+
+We provide a set of simple tools to generate POI databases. 
+These tools are delivered "as is", free of charge. 
+
+You can download the latest version here:
+	http://www.palmtop.nl/ce/support/nav_poi.html
+
+
+The first tool, MAKEOV2, can be used to convert a simple text file 
+containing the coordinates and names of locations into a ready-to-
+use OV2 file.
+
+The second tool, DUMPOV2, can dump the content of POI databases into 
+text format (yes, text that can be used by the MAKEOV2 tool). 
+
+
+
+
+DUMPOV2 1.22
+============
+
+The use of DUMPOV2.EXE is simple and straightforward:
+
+    DUMPOV2 [inputfilename] [outputfilename] 
+
+The easiest usage is to provide no parameters: DUMPOV2 will convert
+all OV2 and OVR files in the current directory.
+
+If you specify "inputfilename", it must be a valid TomTom Navigator 
+POI file (with extension OV2) or a valid Route Planner or Citymaps 
+OVERLAY file (with extension OVR). It is recommended to provide
+an outputfilename with extension ASC. 
+
+
+
+
+MAKEOV2 1.1
+===========
+
+The use of MAKEOV2.EXE is as follows:
+
+    MAKEOV2 inputfilename [outputfilename] 
+
+The input file should be a text file (extension ASC is recommended!) that 
+should simply contain lines of text. Any line starting with a semi-colon 
+will be ignored. Empty lines will also be ignored. All other lines are 
+expected to represent points of interest. Such a line should specify a 
+longitude, a latitude and a name, seperated by commas. 
+
+It is recommended that the name is put between double quotes. 
+
+A name should not contain double quotes. Longitudes and latitudes may be 
+specified either as degrees and fractions of degrees, or in degrees, 
+minutes and seconds. Both colons and single-quote/double-quote notation 
+may be used for minutes and seconds. So, all the following lines are 
+all equivalent: 
+
+
+	53.5 , 4 , "Truckers Restaurant La Bamba" 
+	53.5000000 , 4.00000000 , "Truckers Restaurant La Bamba"
+	53'30"00 , 4'00"00 , "Truckers Restaurant La Bamba" 
+	53'30 , 4'0 , "Truckers Restaurant La Bamba" 
+	53:30:0 , 4 , "Truckers Restaurant La Bamba" 
+
+ 

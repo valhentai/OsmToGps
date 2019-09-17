@@ -1,5 +1,5 @@
 [out:json][timeout:300];
-{{geocodeArea:France}}->.searchArea;
+area({geoarea})->.searchArea;
 // gather results
 (
   nwr["tourism"="caravan_site"](area.searchArea);
