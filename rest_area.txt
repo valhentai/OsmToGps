@@ -1,0 +1,8 @@
+[out:json][timeout:300];
+area({geoarea})->.searchArea;
+// gather results
+(
+  nwr["highway"="rest_area"](area.searchArea);
+  nwr["highway"="services"](area.searchArea);
+);
+out center;
