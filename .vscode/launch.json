@@ -4,12 +4,30 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        
         {
             "name": "Python : Fichier actuel",
             "type": "python",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Test export",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}\\osmtogps.py",
+            "console": "integratedTerminal",
+            "args": ["--query","${workspaceRoot}\\rest_area.txt","--geoarea","France métropolitaine"]
+        },
+        {
+            "name": "Test export json",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}\\osmtogps.py",
+            "console": "integratedTerminal",
+            "args": ["--geojson","${workspaceRoot}\\data\\aire_camping_car.geojson"]
         }
     ]
 }
